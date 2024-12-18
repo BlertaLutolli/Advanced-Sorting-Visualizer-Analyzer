@@ -1,0 +1,179 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #0f1117;
+    color: #ffffff;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background-color: #14161c;
+    padding: 20px;
+    border-right: 2px solid #2c303a;
+}
+
+.sidebar h2 {
+    margin-bottom: 15px;
+    color: #10d684;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #10d684;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+    color: #10d684;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px; /* Spacing between controls and time complexity */
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input[type="range"] {
+    flex: 1;
+}
+
+.controls input[type="text"] {
+    width: 200px; /* Fixed width for user input field */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px;
+    background-color: #10d684;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0a9f64;
+}
+
+/* Time Complexity Section */
+.time-complexity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 10px; /* Add spacing from controls */
+}
+
+.time-button {
+    background-color: #10d684;
+    color: #000;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.3s ease;
+}
+
+.time-button:hover {
+    background-color: #0a9f64;
+}
+
+.complexity-values {
+    display: flex;
+    gap: 10px;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.complexity-values div {
+    background-color: #2c303a;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.complexity-values span {
+    background-color: #14161c;
+    color: #10d684;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: normal;
+}
+
+/* Visualization Container */
+.visualization {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center; /* Center the bars */
+    gap: 2px; /* Reduced gap for tighter spacing */
+    background-color: #1b1e28;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevent scrollbars */
+    height: 350px; /* Fixed height for visualization */
+}
+
+/* Bar Styling */
+.visualization div {
+    flex: 1; /* Bars scale proportionally */
+    max-width: 18px; /* Narrower bars to fit more on one row */
+    background-color: #10d684; /* Default bar color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #ffffff; /* Text color */
+    font-size: 10px; /* Text size for numbers */
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Highlighted Bar */
+.visualization div.highlight {
+    background-color: yellow; /* Highlight color during sorting */
+}
