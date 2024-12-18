@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Sorting Algorithms</h2>
+            <ul>
+                <li id="quick-sort" class="active">Quick Sort</li>
+                <li id="merge-sort">Merge Sort</li>
+                <li id="heap-sort">Heap Sort</li>
+                <li id="radix-sort">Radix Sort</li>
+            </ul>
+        </div>        
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1 id="algorithm-title">Quick Sort</h1>
+            <p id="algorithm-description">
+                Quick Sort is a divide-and-conquer algorithm that sorts by partitioning the array...
+            </p>
+
+            <!-- Controls -->
+            <div class="controls">
+                <label for="speed">Speed</label>
+                <input type="range" id="speed" min="1" max="10" value="5">
+                <button id="play">Play</button>
+                <button id="reset">Reset</button>
+                <input type="text" id="custom-array" placeholder="Enter numbers separated by commas">
+                <button id="set-array">Set Array</button>
+            </div>
+            
+            <!-- Time Complexity Section -->
+            <div class="time-complexity">
+                <button class="time-button">Time Complexity <span>&#x279E;</span></button>
+                <div class="complexity-values">
+                    <div>Best <span id="best-time">O(n log n)</span></div>
+                    <div>Average <span id="average-time">O(n log n)</span></div>
+                    <div>Worst <span id="worst-time">O(n²)</span></div>
+                </div>
+            </div>
+            
+            <!-- Visualization Bars -->
+            <div class="visualization" id="visualization"></div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
