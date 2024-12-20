@@ -351,3 +351,55 @@ async function countingSort(exp) {
     await wait(speedSlider.value);
   }
 }
+// Algorithm Selection
+// Algorithm Selection
+function setAlgorithm(algorithmKey) {
+  isRunning = false; // Stop any running algorithm
+  playButton.textContent = "Play"; // Reset button text
+  currentAlgorithm = algorithmKey;
+
+  const { name, description } = algorithms[algorithmKey];
+  algorithmTitle.textContent = name;
+  algorithmDescription.textContent = description;
+
+  // Update time complexity values
+  document.getElementById("best-time").textContent =
+    timeComplexities[algorithmKey].best;
+  document.getElementById("average-time").textContent =
+    timeComplexities[algorithmKey].average;
+  document.getElementById("worst-time").textContent =
+    timeComplexities[algorithmKey].worst;
+
+  // Highlight active algorithm
+  document
+    .querySelectorAll(".sidebar ul li")
+    .forEach((li) => li.classList.remove("active"));
+  document.getElementById(algorithmKey).classList.add("active");
+
+  // Clear the report section
+  const reportSection = document.getElementById("report-section");
+  if (reportSection) {
+    reportSection.innerHTML = ""; // Clear the contents
+  }
+
+  initializeArray(); // Reinitialize the array
+}
+
+// Event Listeners
+playButton.addEventListener("click", handlePlayStop);
+resetButton.addEventListener("click", initializeArray);
+document
+  .getElementById("quick-sort")
+  .addEventListener("click", () => setAlgorithm("quick-sort"));
+document
+  .getElementById("heap-sort")
+  .addEventListener("click", () => setAlgorithm("heap-sort"));
+document
+  .getElementById("radix-sort")
+  .addEventListener("click", () => setAlgorithm("radix-sort"));
+document
+  .getElementById("merge-sort")
+  .addEventListener("click", () => setAlgorithm("merge-sort"));
+
+// Initialize
+initializeArray();
