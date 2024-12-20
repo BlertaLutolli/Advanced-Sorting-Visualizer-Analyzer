@@ -14,6 +14,10 @@ This project is aimed at **students**, **programming enthusiasts**, and anyone l
 
 ### **Key Features**
 - *Real-time visualization*: watch how different sorting algorithms manipulate data step by step.
+
+https://github.com/user-attachments/assets/efe43a71-1610-4a55-9d3d-9ff58dfb30fa
+
+
 - *Customizable array input*: input your own array of numbers to see how the algorithm sorts them.![user input](https://github.com/user-attachments/assets/6c4a3338-bdc6-4a53-bdc6-8a6f44b2cb20)
 
 - *Adjustable speed*: control the speed of the visualizations to slow down or speed up the sorting process for better understanding.![speed](https://github.com/user-attachments/assets/680c9efd-9b84-4eae-9e27-6a40895ef9f6)
