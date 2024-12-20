@@ -310,3 +310,44 @@ async function merge(left, mid, right) {
     await wait(speedSlider.value);
   }
 }
+// Radix Sort
+async function radixSort() {
+  let max = Math.max(...array); // Find the maximum value in the array
+  for (let exp = 1; Math.floor(max / exp) > 0; exp *= 10) {
+    if (!isRunning) return;
+    await countingSort(exp);
+  }
+  renderArray(); // Render final sorted array
+}
+
+async function countingSort(exp) {
+  let n = array.length;
+  let output = Array(n).fill(0);
+  let count = Array(10).fill(0);
+
+  // Count occurrences of digits
+  for (let i = 0; i < n; i++) {
+    let digit = Math.floor(array[i] / exp) % 10;
+    count[digit]++;
+    renderArray([i]); // Highlight current bar
+    await wait(speedSlider.value);
+  }
+
+  // Cumulative count
+  for (let i = 1; i < 10; i++) count[i] += count[i - 1];
+
+  // Build the output array
+  for (let i = n - 1; i >= 0; i--) {
+    let digit = Math.floor(array[i] / exp) % 10;
+    output[count[digit] - 1] = array[i];
+    count[digit]--;
+  }
+
+  // Copy sorted output to original array
+  for (let i = 0; i < n; i++) {
+    array[i] = output[i];
+    swapCount++; // Increment swap count
+    renderArray([i]);
+    await wait(speedSlider.value);
+  }
+}
