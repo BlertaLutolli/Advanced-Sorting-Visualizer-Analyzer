@@ -111,3 +111,53 @@ function swap(arr, i, j) {
     }
 }
 
+// Update Report Function
+// Update Report Function
+function updateReport(algorithmName, elapsedTime, swapCount) {
+    console.log(`Updating report for ${algorithmName}`); // Debugging
+    console.log(`Time: ${elapsedTime}, Swaps: ${swapCount}`); // Debugging
+
+    const reportSection = document.getElementById("report-section");
+
+    if (!reportSection) {
+        console.error("Report section not found in the DOM.");
+        return;
+    }
+
+    // Clear the previous report
+    reportSection.innerHTML = "";
+
+    // Create and append the new report
+    const reportEntry = document.createElement("div");
+    reportEntry.classList.add("report-entry");
+    reportEntry.innerHTML = `
+        <h2>Algorithm Report</h2>
+        <div><strong>${algorithmName}</strong></div>
+        <div>Time Taken: ${elapsedTime.toFixed(2)} ms</div>
+        <div>Swap Count: ${swapCount}</div>
+    `;
+
+    reportSection.appendChild(reportEntry);
+}
+
+
+// Set Array Button
+setArrayButton.addEventListener("click", () => {
+    const input = customArrayInput.value.trim(); // Get user input and trim spaces
+    if (input === "") {
+        alert("Please enter numbers separated by commas (e.g., 10, 20, 30)");
+        return;
+    }
+
+    const inputArray = input.split(",").map(num => Number(num.trim())).filter(num => !isNaN(num) && num > 0);
+    if (inputArray.length < 2) {
+        alert("Please enter at least two valid numbers separated by commas.");
+        return;
+    }
+
+    array = inputArray;
+    renderArray();
+    isRunning = false; // Stop any ongoing sorting
+    playButton.textContent = "Play"; // Reset Play button state
+});
+
