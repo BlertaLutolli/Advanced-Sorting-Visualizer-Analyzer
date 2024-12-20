@@ -160,4 +160,39 @@ setArrayButton.addEventListener("click", () => {
     isRunning = false; // Stop any ongoing sorting
     playButton.textContent = "Play"; // Reset Play button state
 });
+// Sorting Algorithms
 
+// Quick Sort
+async function quickSort(low = 0, high = array.length - 1) {
+    if (!isRunning) return;
+
+    if (low < high) {
+        let pi = await partition(low, high);
+        await quickSort(low, pi - 1);
+        await quickSort(pi + 1, high);
+    }
+    renderArray();
+}
+
+async function partition(low, high) {
+    let pivot = array[high];
+    let i = low - 1;
+
+    for (let j = low; j < high; j++) {
+        if (array[j] < pivot) {
+            i++;
+            if (i !== j) { // Only swap if indices are different
+                [array[i], array[j]] = [array[j], array[i]];
+                swapCount++;
+            }
+            renderArray([i, j]); // Visualization
+            await wait(speedSlider.value);
+        }
+    }
+    if (i + 1 !== high) { // Swap pivot only if it's not in the correct position
+        [array[i + 1], array[high]] = [array[high], array[i + 1]];
+        swapCount++;
+    }
+    renderArray([i + 1, high]); // Visualization
+    return i + 1;
+}
