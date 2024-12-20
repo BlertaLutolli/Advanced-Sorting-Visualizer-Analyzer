@@ -249,54 +249,6 @@ async function heapify(n, i) {
     await heapify(n, largest);
   }
 }
-// Merge Sort
-async function mergeSort(left = 0, right = array.length - 1) {
-  if (!isRunning) return;
-
-  if (left < right) {
-    let mid = Math.floor((left + right) / 2);
-    await mergeSort(left, mid);
-    await mergeSort(mid + 1, right);
-    await merge(left, mid, right);
-  }
-}
->>>>>>> e3a81e1458813ed477bf22c0b18641b0756a0202
-
-async function merge(left, mid, right) {
-  let temp = array.slice(left, right + 1);
-  let i = 0,
-    j = mid - left + 1,
-    k = left;
-
-  while (i <= mid - left && j < temp.length) {
-    if (!isRunning) return;
-
-    if (temp[i] <= temp[j]) {
-      array[k++] = temp[i++];
-    } else {
-      array[k++] = temp[j++];
-      swapCount++; // Increment swap count (for merge counts)
-    }
-    renderArray([k - 1]);
-    await wait(speedSlider.value);
-  }
-
-  while (i <= mid - left) {
-    if (!isRunning) return;
-
-    array[k++] = temp[i++];
-    renderArray([k - 1]);
-    await wait(speedSlider.value);
-  }
-
-  while (j < temp.length) {
-    if (!isRunning) return;
-
-    array[k++] = temp[j++];
-    renderArray([k - 1]);
-    await wait(speedSlider.value);
-  }
-}
 // Radix Sort
 async function radixSort() {
   let max = Math.max(...array); // Find the maximum value in the array
