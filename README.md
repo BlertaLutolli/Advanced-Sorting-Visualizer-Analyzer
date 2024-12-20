@@ -54,16 +54,16 @@ Or, simply drag and drop the index.html file into your browser window.
 
 ## How to Use the Visualizer
 
-Choose an Algorithm: In the sidebar, select one of the algorithms (Quick Sort, Merge Sort, Heap Sort, Radix Sort) by clicking on the respective algorithm name. This will update the main content with the algorithm’s description, time complexities, and visualization.
+**Choose an Algorithm:** In the sidebar, select one of the algorithms (Quick Sort, Merge Sort, Heap Sort, Radix Sort) by clicking on the respective algorithm name. This will update the main content with the algorithm’s description, time complexities, and visualization.
 
-Play/Pause: Click the Play button to start the sorting algorithm. The visualization will show the algorithm in action, with bars representing the array elements. Click Stop to pause the algorithm.
+**Play/Pause:** Click the Play button to start the sorting algorithm. The visualization will show the algorithm in action, with bars representing the array elements. Click Stop to pause the algorithm.
 
-Reset: Click the Reset button to reset the array and start over.
+**Reset:** Click the Reset button to reset the array and start over.
 
-Speed Control: Use the slider to adjust the speed of the sorting process. The higher the value, the faster the sorting will happen.
+**Speed Control:** Use the slider to adjust the speed of the sorting process. The higher the value, the faster the sorting will happen.
 
-Time Complexity: Click on the Time Complexity button to view the best, average, and worst-case time complexities for the selected algorithm.
+**Time Complexity:** Click on the Time Complexity button to view the best, average, and worst-case time complexities for the selected algorithm.
 
-Algorithm Report: Once the sorting is completed, the Algorithm Report section will display the time taken to sort the array and the number of swaps performed.
+**Algorithm Report:** Once the sorting is completed, the Algorithm Report section will display the time taken to sort the array and the number of swaps performed.
   
 
