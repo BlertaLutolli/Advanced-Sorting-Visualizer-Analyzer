@@ -69,3 +69,45 @@ function isSorted(arr) {
     }
     return true;
 }
+
+// Play/Stop Button Logic
+async function handlePlayStop() {
+    if (isRunning) {
+        isRunning = false; // Stop execution
+        playButton.textContent = "Play";
+    } else {
+        // Check if the array is already sorted
+        if (isSorted(array)) {
+            alert("The array is already sorted!");
+            swapCount = 0; // Reset swap count to 0
+            updateReport(algorithms[currentAlgorithm].name, 0, swapCount);
+            return;
+        }
+
+        isRunning = true;
+        playButton.textContent = "Stop";
+
+        // Reset swap count and time
+        swapCount = 0;
+        startTime = performance.now();
+
+        await algorithms[currentAlgorithm].function();
+
+        endTime = performance.now();
+        elapsedTime = endTime - startTime;
+
+        updateReport(algorithms[currentAlgorithm].name, elapsedTime, swapCount);
+
+        isRunning = false;
+        playButton.textContent = "Play";
+    }
+}
+
+// Ensure swaps are counted correctly
+function swap(arr, i, j) {
+    if (i !== j) { // Only count swaps if indices are different
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+        swapCount++; // Increment swap count
+    }
+}
+
