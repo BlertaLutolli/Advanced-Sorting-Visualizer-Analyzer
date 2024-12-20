@@ -25,3 +25,30 @@ https://github.com/user-attachments/assets/efe43a71-1610-4a55-9d3d-9ff58dfb30fa
 - *Time complexity information*: view the time complexities of each algorithm in the best, average, and worst-case scenarios.
 - *Algorithm comparison*: easily compare the sorting algorithms and their efficiency with different input sizes and values.![algorithm report](https://github.com/user-attachments/assets/50dde727-20b8-4c47-b934-d0a18071e565)
 
+- Setup Instructions
+Prerequisites
+Before getting started, make sure you have the following installed:
+
+A modern web browser (Chrome, Firefox, Safari, etc.).
+A text editor (VSCode, Sublime Text, etc.) to modify the code (optional).
+Steps
+Clone the Repository: First, clone the repository to your local machine.
+
+bash
+Copy code
+git clone https://github.com/your-username/sorting-algorithm-visualizer.git
+Open the Project Folder: Navigate to the folder where the project was cloned.
+
+bash
+Copy code
+cd sorting-algorithm-visualizer
+Open the Project in a Browser: Open the index.html file in your browser to start using the visualizer.
+
+bash
+Copy code
+open index.html  # For macOS
+start index.html # For Windows
+Or, simply drag and drop the index.html file into your browser window.
+
+Custom Array Input: You can enter a custom array by typing comma-separated numbers into the input box and clicking Set Array. The algorithm will then visualize the sorting process for that array.
+
