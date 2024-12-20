@@ -228,8 +228,24 @@ async function partition(low, high) {
   return i + 1;
 }
 
+// Heap Sort
+async function heapSort() {
+  let n = array.length;
 
+  // Build heap
+  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) await heapify(n, i);
 
+  // Extract elements from heap
+  for (let i = n - 1; i > 0; i--) {
+      if (!isRunning) return;
+
+      [array[0], array[i]] = [array[i], array[0]];
+      swapCount++; // Increment swap count
+      renderArray([0, i]);
+      await wait(speedSlider.value);
+      await heapify(i, 0);
+  }
+}
 
 async function heapify(n, i) {
   let largest = i;
