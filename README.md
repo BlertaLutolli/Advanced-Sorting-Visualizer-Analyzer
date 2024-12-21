@@ -108,5 +108,21 @@ continue swapping the root with the last element and re-heapifying until the hea
 At the end of the process, the array is sorted in ascending order. 
 Heap Sort has a time complexity of O(n log n) and is an in-place algorithm, but it is not stable.
 
+## Merge Sort
+
+Merge Sort is a divide-and-conquer sorting algorithm that splits an array into halves, sorts each half, and then merges them back together in a sorted manner.
+
+#### Key Steps:
+1. **Divide**: Split the array into two halves.
+2. **Sort**: Recursively sort each half.
+3. **Merge**: Merge the sorted halves into a single sorted array.
+
+#### Complexity:
+- **Best/Average/Worst Case**: O(n log n) (works efficiently regardless of input).
+- **Space Complexity**: O(n) (requires extra space for merging).
+
+Merge Sort is stable, efficient, and consistent, especially for large datasets, but it requires additional space.
+
+
 
 
