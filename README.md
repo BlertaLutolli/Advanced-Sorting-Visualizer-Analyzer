@@ -76,10 +76,9 @@ Radix Sort sorts numbers digit by digit, starting from the least significant dig
 - *Worst Time Complexity: O(nk)
 Where n is the number of elements and k is the range of the digits.
 
-##Quick Sort
+## Quick Sort
 
 Quick Sort is a divide-and-conquer algorithm. It selects a "pivot" element and partitions the array into two sub-arrays:
-
 Elements less than the pivot.
 Elements greater than or equal to the pivot.
 The algorithm recursively applies the same logic to the sub-arrays, sorting them in the process.
