@@ -96,12 +96,15 @@ Space Complexity: O(log n) for recursive stack calls in the best case; O(n) in t
 
 ## Heap Sort
 Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort elements.Here's how it works:
+
 -Build a Max-Heap:
 arrange the input array into a max-heap, where the largest element is at the root (index 0).
+
 -Swap and heapify:
 swap the root (maximum element) with the last element of the heap.
 Reduce the heap size (exclude the last element, as it's now in its correct position).
 Restore the heap property by re-heapifying the remaining heap (using a process called heapify).
+
 -Repeat:
 continue swapping the root with the last element and re-heapifying until the heap size is reduced to 1.
 At the end of the process, the array is sorted in ascending order. 
