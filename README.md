@@ -75,3 +75,26 @@ Radix Sort sorts numbers digit by digit, starting from the least significant dig
 - *Average Time Complexity: O(nk)
 - *Worst Time Complexity: O(nk)
 Where n is the number of elements and k is the range of the digits.
+
+##Quick Sort
+
+Quick Sort is a divide-and-conquer algorithm. It selects a "pivot" element and partitions the array into two sub-arrays:
+
+Elements less than the pivot.
+Elements greater than or equal to the pivot.
+The algorithm recursively applies the same logic to the sub-arrays, sorting them in the process.
+
+-Key Steps in Quick Sort:
+Pivot Selection: Choose an element as the pivot (e.g., the first, last, or a random element).
+Partitioning: Rearrange the array so that elements smaller than the pivot are to its left, and those greater are to its right.
+Recursive Sorting: Recursively apply Quick Sort to the left and right sub-arrays.
+
+-Complexity of Quick Sort:
+Best Case Time Complexity: O(n log n) (Occurs when the pivot divides the array into two equal parts).
+Average Case Time Complexity: O(n log n).
+Worst Case Time Complexity: O(n^2) (Occurs when the pivot is the smallest or largest element, leading to unbalanced partitions).
+Space Complexity: O(log n) for recursive stack calls in the best case; O(n) in the worst case.
+
+
+
+
