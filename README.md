@@ -33,47 +33,45 @@ Before getting started, make sure you have the following installed:
 
 To set up the project, follow these steps:
 
-1. Clone the repository to your local machine:
-   ```bashbash
 Copy code
 git clone https://github.com/BlertaLutolli/Advanced-Sorting-Visualizer-Analyzer
 
-2.Open the Project Folder: Navigate to the folder where the project was cloned.
+2.Open the project folder: navigate to the folder where the project was cloned.
 bash
 Copy code
 cd sorting-algorithm-visualizer
 
-3.Open the Project in a Browser: Open the index.html file in your browser to start using the visualizer.
+3.Open the project in a browser: open the index.html file in your browser to start using the visualizer.
 bash
 Copy code
 open index.html  # For macOS
 start index.html # For Windows
 Or, simply drag and drop the index.html file into your browser window.
 
-4.Custom Array Input: You can enter a custom array by typing comma-separated numbers into the input box and clicking Set Array. The algorithm will then visualize the sorting process for that array.
+4.Custom array input: You can enter a custom array by typing comma-separated numbers into the input box and clicking Set Array. The algorithm will then visualize the sorting process for that array.
 
 ## How to Use the Visualizer
 
-**Choose an Algorithm:** In the sidebar, select one of the algorithms (Quick Sort, Merge Sort, Heap Sort, Radix Sort) by clicking on the respective algorithm name. This will update the main content with the algorithm’s description, time complexities, and visualization.
+**Choose an algorithm:** In the sidebar, select one of the algorithms (Quick Sort, Merge Sort, Heap Sort, Radix Sort) by clicking on the respective algorithm name. This will update the main content with the algorithm’s description, time complexities, and visualization.
 
 **Play/Pause:** Click the Play button to start the sorting algorithm. The visualization will show the algorithm in action, with bars representing the array elements. Click Stop to pause the algorithm.
 
 **Reset:** Click the Reset button to reset the array and start over.
 
-**Speed Control:** Use the slider to adjust the speed of the sorting process. The higher the value, the faster the sorting will happen.
+**Speed control:** Use the slider to adjust the speed of the sorting process. The higher the value, the faster the sorting will happen.
 
-**Time Complexity:** Click on the Time Complexity button to view the best, average, and worst-case time complexities for the selected algorithm.
+**Time complexity:** Click on the Time Complexity button to view the best, average, and worst-case time complexities for the selected algorithm.
 
-**Algorithm Report:** Once the sorting is completed, the Algorithm Report section will display the time taken to sort the array and the number of swaps performed.
+**Algorithm report:** Once the sorting is completed, the Algorithm Report section will display the time taken to sort the array and the number of swaps performed.
   
-## Sorting Algorithms Explained
+## Sorting algorithms explained
 
 ## Radix Sort
 Radix Sort sorts numbers digit by digit, starting from the least significant digit to the most significant. It uses a stable sub-sorting algorithm (like counting sort) for each digit.
 
-- *Best Time Complexity: O(nk)
-- *Average Time Complexity: O(nk)
-- *Worst Time Complexity: O(nk)
+- *Best time complexity: O(nk)
+- *Average time complexity: O(nk)
+- *Worst time complexity: O(nk)
 Where n is the number of elements and k is the range of the digits.
 
 ## Quick Sort
@@ -83,16 +81,16 @@ Elements less than the pivot.
 Elements greater than or equal to the pivot.
 The algorithm recursively applies the same logic to the sub-arrays, sorting them in the process.
 
--Key Steps in Quick Sort:
-Pivot Selection: Choose an element as the pivot (e.g., the first, last, or a random element).
-Partitioning: Rearrange the array so that elements smaller than the pivot are to its left, and those greater are to its right.
-Recursive Sorting: Recursively apply Quick Sort to the left and right sub-arrays.
+-Key steps in Quick Sort:
+Pivot selection: choose an element as the pivot (e.g., the first, last, or a random element).
+Partitioning: rearrange the array so that elements smaller than the pivot are to its left, and those greater are to its right.
+Recursive sorting: recursively apply Quick Sort to the left and right sub-arrays.
 
 -Complexity of Quick Sort:
-Best Case Time Complexity: O(n log n) (Occurs when the pivot divides the array into two equal parts).
-Average Case Time Complexity: O(n log n).
-Worst Case Time Complexity: O(n^2) (Occurs when the pivot is the smallest or largest element, leading to unbalanced partitions).
-Space Complexity: O(log n) for recursive stack calls in the best case; O(n) in the worst case.
+Best case time complexity: O(n log n) (Occurs when the pivot divides the array into two equal parts).
+Average case time complexity: O(n log n).
+Worst case time complexity: O(n^2) (Occurs when the pivot is the smallest or largest element, leading to unbalanced partitions).
+Space complexity: O(log n) for recursive stack calls in the best case; O(n) in the worst case.
 
 ## Heap Sort
 Heap Sort is a comparison-based sorting algorithm that uses a binary heap data structure to sort elements.Here's how it works:
