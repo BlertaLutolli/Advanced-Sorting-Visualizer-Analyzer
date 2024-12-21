@@ -36,7 +36,7 @@ To set up the project, follow these steps:
 1. Clone the repository to your local machine:
    ```bashbash
 Copy code
-git clone https://github.com/your-username/sorting-algorithm-visualizer.git
+git clone https://github.com/BlertaLutolli/Advanced-Sorting-Visualizer-Analyzer
 
 2.Open the Project Folder: Navigate to the folder where the project was cloned.
 bash
@@ -66,4 +66,12 @@ Or, simply drag and drop the index.html file into your browser window.
 
 **Algorithm Report:** Once the sorting is completed, the Algorithm Report section will display the time taken to sort the array and the number of swaps performed.
   
+## Sorting Algorithms Explained
 
+## Radix Sort
+Radix Sort sorts numbers digit by digit, starting from the least significant digit to the most significant. It uses a stable sub-sorting algorithm (like counting sort) for each digit.
+
+- *Best Time Complexity: O(nk)
+- *Average Time Complexity: O(nk)
+- *Worst Time Complexity: O(nk)
+Where n is the number of elements and k is the range of the digits.
